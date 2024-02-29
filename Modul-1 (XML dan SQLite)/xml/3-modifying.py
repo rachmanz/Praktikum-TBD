@@ -1,7 +1,7 @@
 import xml.etree.ElementTree as ET
 
 # Membaca file xml 
-tree = ET.parse("../Modul-1 (XML dan SQLite)/xml/books.xml")
+tree = ET.parse("D:/My Wish/Collage Data/Semester 6/Teknologi Basis Data/Praktikum-TBD/Modul-1 (XML dan SQLite)/xml/books.xml")
 root = tree.getroot()
 
 # Membuat elemen untuk buku baru 
