@@ -1,7 +1,7 @@
 import sqlite3 as sq3
 
 def create_table():
-    conn = sq3.connect("D:/My Wish/Collage Data/Semester 6/Teknologi Basis Data/Praktikum-TBD/Modul-1 (XML dan SQLite)/121450128/sqlite/mahasiswa.sqlite")
+    conn = sq3.connect("121450128/sqlite/mahasiswa.sqlite")
     c = conn.cursor()
     c.execute('''CREATE TABLE IF NOT EXISTS mahasiswa
                 (id INTEGER PRIMARY KEY, name TEXT, prodi TEXT)''')
@@ -14,7 +14,7 @@ def create_table():
 create_table() 
 
 def addmahasiswa(id, name, prodi):
-    conn = sq3.connect('D:/My Wish/Collage Data/Semester 6/Teknologi Basis Data/Praktikum-TBD/Modul-1 (XML dan SQLite)/121450128/sqlite/mahasiswa.sqlite')
+    conn = sq3.connect('121450128/sqlite/mahasiswa.sqlite')
     c = conn.cursor() 
     c.execute("INSERT INTO mahasiswa (id, name, prodi) VALUES (?, ?, ?)", (id, name, prodi))
     conn.commit() 
@@ -23,7 +23,7 @@ def addmahasiswa(id, name, prodi):
     print("User berhasil ditambahkan")
 
 def delete_mahasiswa(id):
-    conn = sq3.connect("D:/My Wish/Collage Data/Semester 6/Teknologi Basis Data/Praktikum-TBD/Modul-1 (XML dan SQLite)/121450128/sqlite/mahasiswa.sqlite")
+    conn = sq3.connect("121450128/sqlite/mahasiswa.sqlite")
     c = conn.cursor() 
     c.execute("DELETE FROM mahasiswa WHERE id = ?", (id,)) 
     conn.commit() 
@@ -32,7 +32,7 @@ def delete_mahasiswa(id):
     print("Mahasiswa berhasil di drop out (DO)")
 
 def get_all_mahasiswa():
-    conn = sq3.connect("D:/My Wish/Collage Data/Semester 6/Teknologi Basis Data/Praktikum-TBD/Modul-1 (XML dan SQLite)/121450128/sqlite/mahasiswa.sqlite")
+    conn = sq3.connect("121450128/sqlite/mahasiswa.sqlite")
     c = conn.cursor() 
     c.execute("SELECT * FROM mahasiswa")
     rows = c.fetchall()
@@ -40,7 +40,7 @@ def get_all_mahasiswa():
     return rows
 
 def update_mahasiswa(id, name, prodi): 
-    conn = sq3.connect("D:/My Wish/Collage Data/Semester 6/Teknologi Basis Data/Praktikum-TBD/Modul-1 (XML dan SQLite)/121450128/sqlite/mahasiswa.sqlite")
+    conn = sq3.connect("121450128/sqlite/mahasiswa.sqlite")
     c = conn.cursor()
     c.execute("UPDATE mahasiswa SET name = ?, prodi = ? WHERE id = ?", (name, prodi, id))
     conn.commit() 
