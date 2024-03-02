@@ -12,4 +12,5 @@ def create_table():
 
     print('Table berhasil dibuat')
 
+# Tambahan di bagian atas
 create_table() 
