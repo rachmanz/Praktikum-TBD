@@ -1,12 +1,12 @@
-import xm.etree.ElementTree as ET 
+import xml.etree.ElementTree as ET 
 
 # Membaca file XML
-tree = ET.parse('data.xml')
+tree = ET.parse('D:/My Wish/Collage Data/Semester 6/Teknologi Basis Data/Praktikum-TBD/Modul-1 (XML dan SQLite)/xml/xpath/books.xml')
 root = tree.getroot()
 
 # Mencocokan semua elemen menggunakan ekspresi XPath 
 
-all_element = root.findall('.//')
+all_elements = root.findall('.//')
 
 # Menampilkan semua element yang cocok 
 for element in all_elements:

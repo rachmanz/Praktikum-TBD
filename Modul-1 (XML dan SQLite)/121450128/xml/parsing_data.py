@@ -1,7 +1,7 @@
 import xml.etree.ElementTree as ET
 
 # Membaca file xml 
-tree = ET.parse("121450128/xml/mahasiswa.xml")
+tree = ET.parse("D:/My Wish/Collage Data/Semester 6/Teknologi Basis Data/Praktikum-TBD/Modul-1 (XML dan SQLite)/121450128/xml/mahasiswa.xml")
 root = tree.getroot()
 
 # Menampilkan informasi tentang setiap buku 

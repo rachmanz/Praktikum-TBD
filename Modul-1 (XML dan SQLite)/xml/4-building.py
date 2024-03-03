@@ -41,4 +41,4 @@ price2.text = "18.00"
 tree = ET.ElementTree(root)
 ET.indent(tree, space="\t", level=0)
 
-tree.write("xml/new_books.xml")
+tree.write("D:/My Wish/Collage Data/Semester 6/Teknologi Basis Data/Praktikum-TBD/Modul-1 (XML dan SQLite)/xml/new_books.xml")
