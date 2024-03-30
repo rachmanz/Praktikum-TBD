@@ -73,7 +73,7 @@ INSERT INTO abdurrahman_perjalanan (nama_tujuan, waktu, lokasi) VALUES
 
 select * from abdurrahman_perjalanan;
 
--- Pembuatan Data 
+-- Pembuatan Data Spasial
 select nama_tujuan, st_makeline(lokasi order by waktu) as travel_path
 from abdurrahman_perjalanan
 group by nama_tujuan;
