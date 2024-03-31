@@ -6,74 +6,94 @@ create extension if not exists postgis_topology;
 select postgis_version() 
 
 
--- Soal 1 : Titik Sudut 
+
 -- Membuat tabel spasial 
-create table abdurrahman_netherlands(
+create table contoh_spasial_table (
 	id serial primary key,
-	tujuan_wisata varchar(100),
-	lokasi geometry(point, 4326)
-)
+	name varchar(255),
+	geom geometry(point, 4326)
+);
+
 
 -- Masukan data kedalam tabel
-insert into abdurrahman_netherlands(tujuan_wisata, lokasi)
+insert into contoh_spasial_table (name, geom)
 values
-	('Amsterdam', ST_GeomFromText('point(4.9004515566675035 52.36641588558316)', 4326)),
-	('Ruigoord', ST_GeomFromText('point(4.749431201086546 52.41102153629598)', 4326)),
-	('Muiden', ST_GeomFromText('point(5.067531905068999 52.328918613289545)', 4326)),
-	('Abcoude', ST_GeomFromText('point(4.9713001524276885 52.271775095828254)', 4326)),
-	('Wilnis', ST_GeomFromText('point(4.907357118700586 52.19433047247097)', 4326)),
-	('Zegveld', ST_GeomFromText('point(4.841802207150338 52.11236928004155)', 4326)),
-	('Bodegraven', ST_GeomFromText('point(4.739488929787247 52.082696664463995)', 4326)),
-	('Boskoop', ST_GeomFromText('point(4.65409268786447 52.07479539581394)', 4326)),
-	('Rotterdam', ST_GeomFromText('point(4.46740576795244 51.92333975871206)', 4326)),
-	('Den Haag', ST_GeomFromText('point(4.303612410481544 52.070820801924555)', 4326));
+	('Titik A', ST_GeomFromText('point(105.238264 -5.382384)', 4326)),
+	('Titik B', ST_GeomFromText('point(105.25966331153762 -5.371246988067161)', 4326)),
+	('Titik C', ST_GeomFromText('point(105.29395063132908 -5.389162474187335)', 4326)),
+	('Titik D', ST_GeomFromText('point(105.27474000534663 -5.414340101593805)', 4326)),
+	('Titik E', ST_GeomFromText('point(105.249936412306 -5.442421602575001)', 4326));
 	
 -- Memilih data yang sudah dibuat 
-select  * from abdurrahman_netherlands;
+select  * from contoh_spasial_table;
 
 
--- Soal 2 : Polygon
 -- Membuat tabel batas daerah 
-create table abdurrahman_amsterdam (
+create table batas_daerah (
 	id serial PRIMARY KEY,
-	nama_kota varchar(100),
-	batas_kota GEOMETRY(POLYGON, 4326)
+	name varchar(100),
+	boundary_geom GEOMETRY(POLYGON, 4326)
 );
 
 -- Masukan insert data batas daerah 
-INSERT INTO abdurrahman_amsterdam (nama_kota, batas_kota)
-VALUES
-	('Amsterdam', ST_GeomFromText('POLYGON((4.738540 52.430175, 4.853206 52.415069, 4.866791 52.431393, 4.983454 52.427008, 5.068842 52.415558, 5.009221 52.372860, 5.031235 52.352124, 5.002042 52.343061, 4.964714 52.353001, 4.913627 52.328636, 4.910756 52.317520, 4.855720 52.321323, 4.756656 52.357873, 4.757613 52.396729, 4.728420 52.399649, 4.738540 52.430175))', 4326));
+insert into batas_daerah (name, boundary_geom) 
+values 
+	('Batas Daerah 1', ST_GeomFromText('polygon((104.59583172039652 -5.007943698225315, 105.02489364382569 -5.006084566734241, 105.03659019500154 -5.35615555856873, 104.60351141850697 -5.385116931967321, 104.59583172039652 -5.007943698225315))',4326));
 
-select * from abdurrahman_amsterdam;
+select * from batas_daerah;
 
 
--- Soal 3 : Titik Perjalanan
-create table abdurrahman_perjalanan(
+-- Membuat sebuah polygon
+select st_makepolygon(st_geomfromtext('LINESTRING(0 0, 0 10, 10 10, 10 0, 0 0)')) as polygon_geom; 
+
+
+-- Menambahkan titik ke dalam polygon
+select st_addpoint(st_geomfromtext('LINESTRING(0 0, 0 10, 10 10, 10 0, 0 0)'), st_makepoint(5, 5)) as modified_polygon_geom; 
+
+
+select st_multi(st_collect(geom)) as multipoint_geom
+from (
+	values 
+	(st_makepoint(1, 2)),
+	(st_makepoint(3, 4))	
+) as points(geom)
+
+
+-- Linestring dengan urutan kooridinat titik a ke titik b
+select st_geomfromtext('LINESTRING(1 1, 2 2, 3 3)') as linestring_geom;
+
+-- Flip urutan koordinat dalam linestring
+select ST_FlipCoordinates(ST_GeomFromText('LINESTRING(1 1, 2 2, 3 3)')) as flipped_linestring_geom;
+
+
+create table travel_points(
 	id SERIAL primary key,
-	nama_tujuan VARCHAR(100), -- nama perjalanan
-	waktu TIMESTAMP, -- Waktu titik diperoleh
-	lokasi GEOMETRY(Point, 4326) -- koor titik (SERIALRID WGS 84)
+	nama_perjalanan VARCHAR(100), -- nama perjalanan
+	waktu TIMESTAMP, -- WAktu titik diperoleh
+	koordinat_titik GEOMETRY(Point, 4326) --koor titik (SERIALRID WGS 84)
 );
 
-INSERT INTO abdurrahman_perjalanan (nama_tujuan, waktu, lokasi) VALUES
-	('Foam', '2024-03-17 08:00:00', ST_GeomFromText('POINT(4.893017 52.364342)', 4326)),
-	('Foam', '2024-03-17 08:01:00', ST_GeomFromText('POINT(4.894874 52.363936)', 4326)),
-	('Foam', '2024-03-17 08:02:00', ST_GeomFromText('POINT(4.897447 52.364351)', 4326)),
-	('Foam', '2024-03-17 08:03:00', ST_GeomFromText('POINT(4.900217 52.364686)', 4326)),
-	('Foam', '2024-03-17 08:04:00', ST_GeomFromText('POINT(4.901863 52.364753)', 4326)),
-	('Foam', '2024-03-17 08:05:00', ST_GeomFromText('POINT(4.903179 52.365239)', 4326)),
-	('Hart Museum', '2024-03-17 09:01:00', ST_GeomFromText('POINT(4.893017 52.364342)', 4326)),
-	('Hart Museum', '2024-03-17 08:02:00', ST_GeomFromText('POINT(4.901369 52.365289)', 4326)),
-	('Hart Museum', '2024-03-17 09:03:00', ST_GeomFromText('POINT(4.900245 52.365155)', 4326)),
-	('Hart Museum', '2024-03-17 09:04:00', ST_GeomFromText('POINT(4.897255 52.364686)', 4326)),
-	('Hart Museum', '2024-03-17 09:05:00', ST_GeomFromText('POINT(4.895609 52.364519)', 4326)),
-	('Hart Museum', '2024-03-17 09:06:00', ST_GeomFromText('POINT(4.893470 52.364686)', 4326));
+INSERT INTO travel_points (nama_perjalanan, waktu, koordinat_titik) VALUES
+	('Jalan jalan', '2024-03-14 08:00:00', ST_GeomFromText('POINT(105.2191782692193 -5.393767044641828)', 4326)),
+	('Jalan jalan', '2024-03-14 08:05:00', ST_GeomFromText('POINT(105.2351697933072 -5.3952314124109035)', 4326)),
+	('Jalan jalan', '2024-03-14 08:15:00', ST_GeomFromText('POINT(105.24838513191222 -5.40213429672211)', 4326)),
+	('Jalan jalan', '2024-03-14 08:20:00', ST_GeomFromText('POINT(105.25616150254724 -5.437277842840278)', 4326)),
+	('Jalan jalan', '2024-03-14 08:25:00', ST_GeomFromText('POINT(105.26246640534714 -5.445436215124216)', 4326)),
+	('Jalan jalan', '2024-03-14 08:30:00', ST_GeomFromText('POINT(105.25174789793725 -5.42305305746494)', 4326)),
+	('Jalan jalan', '2024-03-14 08:35:00', ST_GeomFromText('POINT(105.27171299814107 -5.445226677693517)', 4326)),
+	('Pergi bekerja', '2024-03-14 09:00:00', ST_GeomFromText('POINT(105.29213727524879 -5.39475814185437)', 4326)),
+	('Pergi bekerja', '2024-03-14 09:05:00', ST_GeomFromText('POINT(105.28289114992188 -5.401663498427209)', 4326)),
+	('Pergi bekerja', '2024-03-14 09:10:00', ST_GeomFromText('POINT(105.28120838449183 -5.38262618887499)', 4326)),
+	('Pergi bekerja', '2024-03-14 09:15:00', ST_GeomFromText('POINT(105.27049115639362 -5.380953562521354)', 4326)),
+	('Pergi bekerja', '2024-03-14 09:20:00', ST_GeomFromText('POINT(105.27049111292433 -5.38011675713395)', 4326)),
+	('Pergi bekerja', '2024-03-14 09:25:00', ST_GeomFromText('POINT(105.25851366419465 -5.381582009006611)', 4326)),
+	('Pergi bekerja', '2024-03-14 09:30:00', ST_GeomFromText('POINT(105.24863757974478 -5.375934137771177)', 4326)),
+	('Pergi bekerja', '2024-03-14 09:35:00', ST_GeomFromText('POINT(105.24800722808618 -5.37677095896807)', 4326)),
+	('Pergi bekerja', '2024-03-14 09:40:00', ST_GeomFromText('POINT(105.24044277805818 -5.373005624308156)', 4326));
 
 
-select * from abdurrahman_perjalanan;
 
--- Pembuatan Data Spasial
-select nama_tujuan, st_makeline(lokasi order by waktu) as travel_path
-from abdurrahman_perjalanan
-group by nama_tujuan;
+--16.2 select data 
+select nama_perjalanan, st_makeline(koordinat_titik order by waktu) as travel_path
+from travel_points 
+group by nama_perjalanan;
