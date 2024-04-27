@@ -1,0 +1,302 @@
+﻿[
+  {
+    "mahasiswa": {
+      "identity": 90,
+      "labels": ["Mahasiswa"],
+      "properties": {
+        "NIM": "128",
+        "Name": "Abdurrahman"
+      },
+      "elementId": "4:7133887d-7262-4b2f-8a30-3cb9cb5a72d2:90"
+    },
+    "r": {
+      "identity": 0,
+      "start": 90,
+      "end": 100,
+      "type": "MENGAMBIL",
+      "properties": {},
+      "elementId": "5:7133887d-7262-4b2f-8a30-3cb9cb5a72d2:0",
+      "startNodeElementId": "4:7133887d-7262-4b2f-8a30-3cb9cb5a72d2:90",
+      "endNodeElementId": "4:7133887d-7262-4b2f-8a30-3cb9cb5a72d2:100"
+    },
+    "matkul": {
+      "identity": 100,
+      "labels": ["MataKuliah"],
+      "properties": {
+        "TPB": 5,
+        "prodi": "Kimia"
+      },
+      "elementId": "4:7133887d-7262-4b2f-8a30-3cb9cb5a72d2:100"
+    }
+  },
+  {
+    "mahasiswa": {
+      "identity": 91,
+      "labels": ["Mahasiswa"],
+      "properties": {
+        "NIM": "119",
+        "Name": "Sasa Rahma Lia"
+      },
+      "elementId": "4:7133887d-7262-4b2f-8a30-3cb9cb5a72d2:91"
+    },
+    "r": {
+      "identity": 1,
+      "start": 91,
+      "end": 101,
+      "type": "MENGAMBIL",
+      "properties": {},
+      "elementId": "5:7133887d-7262-4b2f-8a30-3cb9cb5a72d2:1",
+      "startNodeElementId": "4:7133887d-7262-4b2f-8a30-3cb9cb5a72d2:91",
+      "endNodeElementId": "4:7133887d-7262-4b2f-8a30-3cb9cb5a72d2:101"
+    },
+    "matkul": {
+      "identity": 101,
+      "labels": ["MataKuliah"],
+      "properties": {
+        "TPB": 4,
+        "prodi": "Sains Data"
+      },
+      "elementId": "4:7133887d-7262-4b2f-8a30-3cb9cb5a72d2:101"
+    }
+  },
+  {
+    "mahasiswa": {
+      "identity": 92,
+      "labels": ["Mahasiswa"],
+      "properties": {
+        "NIM": "102",
+        "Name": "Evan"
+      },
+      "elementId": "4:7133887d-7262-4b2f-8a30-3cb9cb5a72d2:92"
+    },
+    "r": {
+      "identity": 2,
+      "start": 92,
+      "end": 102,
+      "type": "MENGAMBIL",
+      "properties": {},
+      "elementId": "5:7133887d-7262-4b2f-8a30-3cb9cb5a72d2:2",
+      "startNodeElementId": "4:7133887d-7262-4b2f-8a30-3cb9cb5a72d2:92",
+      "endNodeElementId": "4:7133887d-7262-4b2f-8a30-3cb9cb5a72d2:102"
+    },
+    "matkul": {
+      "identity": 102,
+      "labels": ["MataKuliah"],
+      "properties": {
+        "TPB": 3,
+        "prodi": "Fisika"
+      },
+      "elementId": "4:7133887d-7262-4b2f-8a30-3cb9cb5a72d2:102"
+    }
+  },
+  {
+    "mahasiswa": {
+      "identity": 93,
+      "labels": ["Mahasiswa"],
+      "properties": {
+        "NIM": "098",
+        "Name": "Fathir"
+      },
+      "elementId": "4:7133887d-7262-4b2f-8a30-3cb9cb5a72d2:93"
+    },
+    "r": {
+      "identity": 3,
+      "start": 93,
+      "end": 103,
+      "type": "MENGAMBIL",
+      "properties": {},
+      "elementId": "5:7133887d-7262-4b2f-8a30-3cb9cb5a72d2:3",
+      "startNodeElementId": "4:7133887d-7262-4b2f-8a30-3cb9cb5a72d2:93",
+      "endNodeElementId": "4:7133887d-7262-4b2f-8a30-3cb9cb5a72d2:103"
+    },
+    "matkul": {
+      "identity": 103,
+      "labels": ["MataKuliah"],
+      "properties": {
+        "TPB": 22,
+        "prodi": "Farmasi"
+      },
+      "elementId": "4:7133887d-7262-4b2f-8a30-3cb9cb5a72d2:103"
+    }
+  },
+  {
+    "mahasiswa": {
+      "identity": 94,
+      "labels": ["Mahasiswa"],
+      "properties": {
+        "NIM": "105",
+        "Name": "Raditia"
+      },
+      "elementId": "4:7133887d-7262-4b2f-8a30-3cb9cb5a72d2:94"
+    },
+    "r": {
+      "identity": 4,
+      "start": 94,
+      "end": 104,
+      "type": "MENGAMBIL",
+      "properties": {},
+      "elementId": "5:7133887d-7262-4b2f-8a30-3cb9cb5a72d2:4",
+      "startNodeElementId": "4:7133887d-7262-4b2f-8a30-3cb9cb5a72d2:94",
+      "endNodeElementId": "4:7133887d-7262-4b2f-8a30-3cb9cb5a72d2:104"
+    },
+    "matkul": {
+      "identity": 104,
+      "labels": ["MataKuliah"],
+      "properties": {
+        "TPB": 19,
+        "prodi": "Sains Lingkungan dan Kelautan"
+      },
+      "elementId": "4:7133887d-7262-4b2f-8a30-3cb9cb5a72d2:104"
+    }
+  },
+  {
+    "mahasiswa": {
+      "identity": 95,
+      "labels": ["Mahasiswa"],
+      "properties": {
+        "NIM": "107",
+        "Name": "Nathanael"
+      },
+      "elementId": "4:7133887d-7262-4b2f-8a30-3cb9cb5a72d2:95"
+    },
+    "r": {
+      "identity": 5,
+      "start": 95,
+      "end": 105,
+      "type": "MENGAMBIL",
+      "properties": {},
+      "elementId": "5:7133887d-7262-4b2f-8a30-3cb9cb5a72d2:5",
+      "startNodeElementId": "4:7133887d-7262-4b2f-8a30-3cb9cb5a72d2:95",
+      "endNodeElementId": "4:7133887d-7262-4b2f-8a30-3cb9cb5a72d2:105"
+    },
+    "matkul": {
+      "identity": 105,
+      "labels": ["MataKuliah"],
+      "properties": {
+        "TPB": 36,
+        "prodi": "Teknik Pertambangan"
+      },
+      "elementId": "4:7133887d-7262-4b2f-8a30-3cb9cb5a72d2:105"
+    }
+  },
+  {
+    "mahasiswa": {
+      "identity": 96,
+      "labels": ["Mahasiswa"],
+      "properties": {
+        "NIM": "106",
+        "Name": "Rangga"
+      },
+      "elementId": "4:7133887d-7262-4b2f-8a30-3cb9cb5a72d2:96"
+    },
+    "r": {
+      "identity": 6,
+      "start": 96,
+      "end": 106,
+      "type": "MENGAMBIL",
+      "properties": {},
+      "elementId": "5:7133887d-7262-4b2f-8a30-3cb9cb5a72d2:6",
+      "startNodeElementId": "4:7133887d-7262-4b2f-8a30-3cb9cb5a72d2:96",
+      "endNodeElementId": "4:7133887d-7262-4b2f-8a30-3cb9cb5a72d2:106"
+    },
+    "matkul": {
+      "identity": 106,
+      "labels": ["MataKuliah"],
+      "properties": {
+        "TPB": 48,
+        "prodi": "Teknik Sipil"
+      },
+      "elementId": "4:7133887d-7262-4b2f-8a30-3cb9cb5a72d2:106"
+    }
+  },
+  {
+    "mahasiswa": {
+      "identity": 97,
+      "labels": ["Mahasiswa"],
+      "properties": {
+        "NIM": "115",
+        "Name": "Saiful"
+      },
+      "elementId": "4:7133887d-7262-4b2f-8a30-3cb9cb5a72d2:97"
+    },
+    "r": {
+      "identity": 7,
+      "start": 97,
+      "end": 107,
+      "type": "MENGAMBIL",
+      "properties": {},
+      "elementId": "5:7133887d-7262-4b2f-8a30-3cb9cb5a72d2:7",
+      "startNodeElementId": "4:7133887d-7262-4b2f-8a30-3cb9cb5a72d2:97",
+      "endNodeElementId": "4:7133887d-7262-4b2f-8a30-3cb9cb5a72d2:107"
+    },
+    "matkul": {
+      "identity": 107,
+      "labels": ["MataKuliah"],
+      "properties": {
+        "TPB": 16,
+        "prodi": "Teknik Informatika"
+      },
+      "elementId": "4:7133887d-7262-4b2f-8a30-3cb9cb5a72d2:107"
+    }
+  },
+  {
+    "mahasiswa": {
+      "identity": 98,
+      "labels": ["Mahasiswa"],
+      "properties": {
+        "NIM": "111",
+        "Name": "Arsal"
+      },
+      "elementId": "4:7133887d-7262-4b2f-8a30-3cb9cb5a72d2:98"
+    },
+    "r": {
+      "identity": 8,
+      "start": 98,
+      "end": 108,
+      "type": "MENGAMBIL",
+      "properties": {},
+      "elementId": "5:7133887d-7262-4b2f-8a30-3cb9cb5a72d2:8",
+      "startNodeElementId": "4:7133887d-7262-4b2f-8a30-3cb9cb5a72d2:98",
+      "endNodeElementId": "4:7133887d-7262-4b2f-8a30-3cb9cb5a72d2:108"
+    },
+    "matkul": {
+      "identity": 108,
+      "labels": ["MataKuliah"],
+      "properties": {
+        "TPB": 25,
+        "prodi": "Teknik Elektro"
+      },
+      "elementId": "4:7133887d-7262-4b2f-8a30-3cb9cb5a72d2:108"
+    }
+  },
+  {
+    "mahasiswa": {
+      "identity": 99,
+      "labels": ["Mahasiswa"],
+      "properties": {
+        "NIM": "143",
+        "Name": "Rafi"
+      },
+      "elementId": "4:7133887d-7262-4b2f-8a30-3cb9cb5a72d2:99"
+    },
+    "r": {
+      "identity": 9,
+      "start": 99,
+      "end": 109,
+      "type": "MENGAMBIL",
+      "properties": {},
+      "elementId": "5:7133887d-7262-4b2f-8a30-3cb9cb5a72d2:9",
+      "startNodeElementId": "4:7133887d-7262-4b2f-8a30-3cb9cb5a72d2:99",
+      "endNodeElementId": "4:7133887d-7262-4b2f-8a30-3cb9cb5a72d2:109"
+    },
+    "matkul": {
+      "identity": 109,
+      "labels": ["MataKuliah"],
+      "properties": {
+        "TPB": 15,
+        "prodi": "Teknik Material"
+      },
+      "elementId": "4:7133887d-7262-4b2f-8a30-3cb9cb5a72d2:109"
+    }
+  }
+]

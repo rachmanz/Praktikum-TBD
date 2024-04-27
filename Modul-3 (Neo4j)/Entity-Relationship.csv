@@ -1,0 +1,11 @@
+﻿mahasiswa,r,matkul
+"(:Mahasiswa {NIM: ""128"",Name: ""Abdurrahman""})",[:MENGAMBIL],"(:MataKuliah {TPB: 5,prodi: ""Kimia""})"
+"(:Mahasiswa {NIM: ""119"",Name: ""Sasa Rahma Lia""})",[:MENGAMBIL],"(:MataKuliah {TPB: 4,prodi: ""Sains Data""})"
+"(:Mahasiswa {NIM: ""102"",Name: ""Evan""})",[:MENGAMBIL],"(:MataKuliah {TPB: 3,prodi: ""Fisika""})"
+"(:Mahasiswa {NIM: ""098"",Name: ""Fathir""})",[:MENGAMBIL],"(:MataKuliah {TPB: 22,prodi: ""Farmasi""})"
+"(:Mahasiswa {NIM: ""105"",Name: ""Raditia""})",[:MENGAMBIL],"(:MataKuliah {TPB: 19,prodi: ""Sains Lingkungan dan Kelautan""})"
+"(:Mahasiswa {NIM: ""107"",Name: ""Nathanael""})",[:MENGAMBIL],"(:MataKuliah {TPB: 36,prodi: ""Teknik Pertambangan""})"
+"(:Mahasiswa {NIM: ""106"",Name: ""Rangga""})",[:MENGAMBIL],"(:MataKuliah {TPB: 48,prodi: ""Teknik Sipil""})"
+"(:Mahasiswa {NIM: ""115"",Name: ""Saiful""})",[:MENGAMBIL],"(:MataKuliah {TPB: 16,prodi: ""Teknik Informatika""})"
+"(:Mahasiswa {NIM: ""111"",Name: ""Arsal""})",[:MENGAMBIL],"(:MataKuliah {TPB: 25,prodi: ""Teknik Elektro""})"
+"(:Mahasiswa {NIM: ""143"",Name: ""Rafi""})",[:MENGAMBIL],"(:MataKuliah {TPB: 15,prodi: ""Teknik Material""})"
