@@ -8,7 +8,7 @@ except Exception as e:
     print(f"Error connecting to MongoDB: {e}")
 
 # Akses Spesifik Data 
-db = client['Abdurrahman_Alatsary']
+db = client['Sasa_Rahma_LiaS']
 
 # Akses Spesifik Collections
 collection = db['buku']

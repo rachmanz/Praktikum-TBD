@@ -8,18 +8,19 @@ except Exception as e:
     print(f"Error connecting to MongoDB: {e}")
 
 # Akses Spesifik Data 
-db = client['Abdurrahman_Alatsary']
+db = client['Sasa_Rahma_Lia']
 
 # Akses Spesifik Collections
-collection = db['buku']
+collection = db['perpustakaan']
 
-# Mencari kriteria yang mau dihapus
-filter_criteria = {"pengarang": "Lewis Carroll"}
 
-# Eksekusi kriteria yang mau dihapus 
-collection.delete_one(filter_criteria)
+# Criteria to find the document to update
+filter_criteria = {"pengarang": "Stephen Hawking"}
 
-print("Berhasil menghapus 1 baris data")
+# New values to set
+new_values = {"$set": {"kategori": "Popular Science"}}
 
-# Disconnect dari MongoDB
-client.close()
+# Perform the update
+collection.update_one(filter_criteria, new_values)
+
+print("Data updated successfully.")
